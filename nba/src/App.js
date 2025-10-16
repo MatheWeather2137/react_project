@@ -50,9 +50,9 @@ export default function Page() {
       const hasCompleteData = team.city && team.conference && team.division;
       if (!hasCompleteData) return false;
 
-      const matchesSearch =
-        team.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        team.city.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesSearch = team.name
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase());
       const matchesConference =
         selectedConference === "All" || team.conference === selectedConference;
       const matchesDivision =
